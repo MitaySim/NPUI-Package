@@ -1,137 +1,23 @@
-    {
-      "name": "com.yourcompany.npui",
-      "version": "1.0.0",
-      "displayName": "NP UI System",
-      "description": "A robust and data-driven UI system for Unity, distributed as pre-compiled DLLs.",
-      "unity": "2021.3",
-      "unityRelease": "0f1",
-      "keywords": [
-        "UI",
-        "Framework",
-        "Menu",
-        "Forms",
-        "Validation"
-      ],
-      "author": {
-        "name": "Your Company Name",
-        "email": "contact@yourcompany.com",
-        "url": "https://www.yourcompany.com"
-      },
-      "dependencies": {
-        "com.unity.textmeshpro": "3.0.6"
-        // Add any other official Unity packages your DLLs explicitly depend on here.
-        // For example, if you use Unity's Input System package:
-        // "com.unity.inputsystem": "1.0.0" 
-      }
-    }
-    ```
-
-    **Explanation of Fields:**
-    * **`name`**: This is the **unique identifier** for your package, following the reverse-domain name convention (e.g., `com.yourcompany.productname`). This is crucial for UPM.
-    * **`version`**: The current version of your package (e.g., `1.0.0`). Follow [Semantic Versioning](https://semver.org/).
-    * **`displayName`**: The human-readable name that appears in the Unity Package Manager window.
-    * **`description`**: A brief explanation of what your package does.
-    * **`unity`**: The minimum Unity Editor version required for this package. Use the major.minor format (e.g., "2021.3").
-    * **`unityRelease`**: (Optional) The specific Unity patch release (e.g., "0f1").
-    * **`keywords`**: (Optional) Tags that help users find your package.
-    * **`author`**: (Optional) Information about the package author.
-    * **`dependencies`**: (Optional) A JSON object listing other UPM packages (official or custom) that your package relies on. **Only include UPM packages here**, not your custom DLL dependencies like `DA.Assets.dll` (since that's already compiled *into* your package structure). For example, if your UI system uses TextMeshPro, you should list `com.unity.textmeshpro` here.
-
-6.  **Create an `asmdef` for your Runtime DLLs (Crucial for DLLs inside UPM):**
-    Even though you've pre-compiled your DLLs, Unity's UPM still expects a way to manage them. The simplest way to make your DLLs accessible to other assemblies *within* the Unity project (like `Assembly-CSharp.dll`) is to place a simple `.asmdef` file next to them.
-
-    * Inside your `Runtime` folder (`C:\UnityPackages\com.yourcompany.npui\Runtime\`), create a new text file named `NP.UI.Core.Runtime.asmdef`.
-
-    **`NP.UI.Core.Runtime.asmdef` Content:**
-
-    
-    ```json
-    {
-      "name": "NP.UI.Core.Runtime",
-      "references": [
-        "DA.Assets" // Reference your DA.Assets assembly here
-      ],
-      "includePlatforms": [],
-      "excludePlatforms": [],
-      "allowUnsafeCode": false,
-      "overrideReferences": false,
-      "precompiledReferences": [],
-      "autoReferenced": true,
-      "defineConstraints": [],
-      "versionDefines": []
-    }
-    ```
-    **Explanation:**
-    * **`name`**: This is the internal assembly name for the code within this UPM package's `Runtime` folder.
-    * **`references`**: This is where you explicitly list the *other* custom assemblies (DLLs) that this assembly depends on. In this case, `NP.UI.Core.dll` depends on `DA.Assets.dll`, so we list `DA.Assets` here. Unity will ensure `DA.Assets.dll` is also present and correctly referenced.
-    * **`autoReferenced`**: Set to `true` so that other assemblies in the consuming project (like `Assembly-CSharp.dll`) automatically get a reference to this `NP.UI.Core.Runtime` assembly.
-
-    * **Important for `DA.Assets.dll`:** If `DA.Assets.dll` is a standalone utility that doesn't depend on `NP.UI.Core.dll`, you might consider putting it in a separate `DA.Assets.Runtime.asmdef` within the same `Runtime` folder, or even in its own UPM package if it's truly independent. For simplicity, if `DA.Assets.dll` is only a dependency of `NP.UI.Core.dll`, having it alongside `NP.UI.Core.dll` and referenced by `NP.UI.Core.Runtime.asmdef` is fine.
-
----
-
-### **Step 2: Initialize and Push to Git**
-
-1.  **Initialize Git:** Open your terminal or Git Bash and navigate to your package's root folder:
-    `cd C:\UnityPackages\com.yourcompany.npui\`
-    `git init`
-
-2.  **Add Files:**
-    `git add .`
-
-3.  **Commit Changes:**
-    `git commit -m "Initial commit of NP UI System UPM package v1.0.0"`
-
-4.  **Create a Remote Repository:** Go to GitHub, GitLab, Bitbucket, or your preferred Git hosting service and create a **new, empty repository**. Do *not* initialize it with a README or license file.
-
-5.  **Link to Remote and Push:**
-    `git remote add origin <YOUR_REPOSITORY_URL>` (e.g., `https://github.com/YourUsername/com.yourcompany.npui.git`)
-    `git push -u origin master` (or `main`, depending on your repository's default branch)
-
----
-
-### **Step 3: Add the Package to Unity Package Manager**
-
-Now, in any new Unity project where you want to use your UI system:
-
-1.  **Open the Unity Editor.**
-2.  Go to `Window > Package Manager`.
-3.  In the Package Manager window, click the `+` icon in the top-left corner.
-4.  Select `Add package from git URL...`.
-5.  Enter the URL of your Git repository.
-    * **For the latest version (master/main branch):**
-        `https://github.com/YourUsername/com.yourcompany.npui.git`
-    * **For a specific version (recommended for stability):**
-        `https://github.com/YourUsername/com.yourcompany.npui.git#1.0.0` (where `1.0.0` matches the version in your `package.json`)
-    * **For a specific commit or tag:**
-        `https://github.com/YourUsername/com.yourcompany.npui.git#<commit_hash_or_tag>`
-
-6.  Click `Add`.
-
-Unity will download the package from your Git repository and install it. Your `NP.UI.Core.dll` and `DA.Assets.dll` will be placed in the project's `Packages` folder (read-only), and their types will become available for use in your project's scripts (provided your main game `.asmdef` references `NP.UI.Core.Runtime`).
-
----
-
-### **Example Final Package Structure on Git:**
-
-
-com.yourcompany.npui/
-├── package.json
-├── Runtime/
-│   ├── NP.UI.Core.dll
-│   ├── NP.UI.Core.dll.meta (optional, but good practice)
-│   ├── DA.Assets.dll
-│   ├── DA.Assets.dll.meta (optional, but good practice)
-│   └── NP.UI.Core.Runtime.asmdef
-│   └── NP.UI.Core.Runtime.asmdef.meta (Unity generates this)
-├── Samples/ (Optional: for example scenes, prefabs, etc.)
-│   └── MyUISampleScene/
-│       └── MyUISampleScene.unity
-│       └── ...
-├── Documentation~/ (Optional: for markdown documentation)
-│   └── index.md
-└── CHANGELOG.md (Optional)
-└── LICENSE.md (Optional)
-
-
-This setup ensures your code is distributed as compiled DLLs, protecting your source, while leveraging Unity's robust Package Manager for easy integration and updates.
+{
+  "name": "com.yourcompany.npui",
+  "version": "1.0.0",
+  "displayName": "NP UI System",
+  "description": "A robust and data-driven UI system for Unity.",
+  "unity": "2021.3",
+  "unityRelease": "0f1",
+  "keywords": [
+    "UI",
+    "Framework",
+    "Menu",
+    "Forms",
+    "Validation"
+  ],
+  "author": {
+    "name": "Your Company Name",
+    "email": "contact@yourcompany.com",
+    "url": "https://www.yourcompany.com"
+  },
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6"
+  }
+}
