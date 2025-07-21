@@ -18,6 +18,7 @@
     "url": "https://www.yourcompany.com"
   },
   "dependencies": {
-    "com.unity.textmeshpro": "3.0.6"
+    "com.unity.textmeshpro": "3.0.6",
+    "DA_Assets.CR": "5.8.0"
   }
 }
