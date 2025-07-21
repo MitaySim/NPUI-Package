@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using System;
+using NP_UI;
 
 // This class defines your custom Editor Window
 public class ClassSelectionWindow : EditorWindow

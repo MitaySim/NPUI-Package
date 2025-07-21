@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System;
 using System.Text.RegularExpressions;
-using System.Collections.Generic; // For generated script (if needed)
+using NP_UI;
 
 public class MenuScriptGeneratorWizard : EditorWindow
 {

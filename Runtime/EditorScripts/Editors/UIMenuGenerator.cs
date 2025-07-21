@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 using NP_UI;
-
-//using NP_UI;
 
 // This is a static class, meaning you can call its methods directly without creating an instance.
 public static class UIMenuGenerator
