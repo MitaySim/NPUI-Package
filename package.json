@@ -1,6 +1,6 @@
 {
   "name": "com.yourcompany.npui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "NP UI System",
   "description": "A robust and data-driven UI system for Unity.",
   "unity": "2021.3",
@@ -13,9 +13,9 @@
     "Validation"
   ],
   "author": {
-    "name": "Your Company Name",
-    "email": "contact@yourcompany.com",
-    "url": "https://www.yourcompany.com"
+    "name": "Simergy",
+    "email": "",
+    "url": ""
   },
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6"

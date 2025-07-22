@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2409293421640520649
+--- !u!1 &1545824026826746203
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,409 +8,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1044825830808850809}
-  - component: {fileID: 7822052732852914695}
-  m_Layer: 0
-  m_Name: MenusCreator
+  - component: {fileID: 7971857239975004160}
+  m_Layer: 5
+  m_Name: Menus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1044825830808850809
-Transform:
+--- !u!224 &7971857239975004160
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2409293421640520649}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 573.42633, y: 383.40375, z: -1190.1947}
+  m_GameObject: {fileID: 1545824026826746203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7367386195551214502}
+  m_Father: {fileID: 659404692636934177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7822052732852914695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2409293421640520649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb574250cecfc04993ba9eb7a69cea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataForMenu:
-  - ID: 
-    ParentCanvas: {fileID: 5819920050593957118}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.NP_MainMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: Main Menu
-    ItemIcon: {fileID: 21300000, guid: f29588c7448e86e43b0ffd0e0be84a52, type: 3}
-    IsAlwaysOn: 1
-    Alignment: 7
-    ScreenCoveragePercent: 0.125
-    LayoutType: 1
-    ItemCellSize: {x: 150, y: 150}
-    ItemSpacing: {x: 5, y: 0}
-    GridPadding:
-      m_Left: 40
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    GridChildAlignment: 0
-    GridLayoutConstraint: 1
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 1, g: 0.79422796, b: 0.33490568, a: 0.7647059}
-    ViewportBackgroundColor: {r: 0.09413331, g: 0.5377358, b: 0.088777125, a: 0}
-    ItemBackgroundColor: {r: 0.087575644, g: 0.22942416, b: 0.4528302, a: 0}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 0}
-    IsBackgroundPanelVisible: 1
-  - ID: 
-    ParentCanvas: {fileID: 5819920050593957118}
-    ItemType:
-      _assemblyQualifiedName: TestMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    MenuName: The Test Menu
-    ItemIcon: {fileID: 21300000, guid: 35d2857a90650414f99eb94ec51502fc, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 6
-    ScreenCoveragePercent: 0.2
-    LayoutType: 1
-    ItemCellSize: {x: 325, y: 50}
-    ItemSpacing: {x: 5, y: 10}
-    GridPadding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    GridChildAlignment: 0
-    GridLayoutConstraint: 1
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 1, g: 0.7723876, b: 0.4292453, a: 0.7372549}
-    ViewportBackgroundColor: {r: 0.09413331, g: 0.5377358, b: 0.088777125, a: 0}
-    ItemBackgroundColor: {r: 0.087575644, g: 0.22942416, b: 0.4528302, a: 0}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 0}
-    IsBackgroundPanelVisible: 1
-  - ID: 
-    ParentCanvas: {fileID: 5819920050593957118}
-    ItemType:
-      _assemblyQualifiedName: NP_SelectablesMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: The Best Test
-    ItemIcon: {fileID: 21300000, guid: f29588c7448e86e43b0ffd0e0be84a52, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.25
-    LayoutType: 0
-    ItemCellSize: {x: 350, y: 60}
-    ItemSpacing: {x: 20, y: 0}
-    GridPadding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    GridChildAlignment: 0
-    GridLayoutConstraint: 2
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.5754717, g: 0.111294046, b: 0.111294046, a: 0.84313726}
-    ViewportBackgroundColor: {r: 0.09413331, g: 0.5377358, b: 0.088777125, a: 0}
-    ItemBackgroundColor: {r: 0.087575644, g: 0.22942416, b: 0.4528302, a: 0}
-    ItemTextColor: {r: 0.735849, g: 0.17007832, b: 0.17007832, a: 0.62352943}
-    IsBackgroundPanelVisible: 1
-  - ID: CubesManagerMenu_CubesManagerMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.CubesManagerMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: Cubes Manager Menu
-    ItemIcon: {fileID: 21300000, guid: f63db436aee72d5469d1a7bf5b8534fe, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 6
-    ScreenCoveragePercent: 0.25
-    LayoutType: 1
-    ItemCellSize: {x: 250, y: 60}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 1
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: DialogBoxMenu_DialogBoxMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.DialogBoxMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: DialogBoxMenu
-    ItemIcon: {fileID: 21300000, guid: 7181008c490ad454fbf860bcde9ee90d, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.3
-    LayoutType: 1
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: PopUpTestMenu_PopUpTestMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.PopUpTestMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: PopUpTestMenu
-    ItemIcon: {fileID: 21300000, guid: 0e6c15b9a0f2c05448b76630b936d7c4, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.5
-    LayoutType: 1
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: NotficationTopMenu_NotficationTopMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.NotficationTopMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: NotficationTopMenu
-    ItemIcon: {fileID: 21300000, guid: dcda81d216ff2c84f95644ae049a937f, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 1
-    ScreenCoveragePercent: 0.15
-    LayoutType: 0
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: LoadingOverlayMenu_LoadingOverlayMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.LoadingOverlayMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: LoadingOverlayMenu
-    ItemIcon: {fileID: 21300000, guid: 9336a63cafce23b4496698ddbb7b0f55, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 11
-    ScreenCoveragePercent: 1
-    LayoutType: 3
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: SlideBarLeftMenu_SlideBarLeftMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.SlideBarLeftMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: SlideBarLeftMenu
-    ItemIcon: {fileID: 21300000, guid: 99a6a695826aa7e46aa373f0c01f9d54, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 12
-    ScreenCoveragePercent: 0.25
-    LayoutType: 1
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: SmolMenu_SmolMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.SmolMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    MenuName: SmolMenu
-    ItemIcon: {fileID: 0}
-    IsAlwaysOn: 0
-    Alignment: 6
-    ScreenCoveragePercent: 0.3
-    LayoutType: 1
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.8584906, g: 0.19032574, b: 0.19032574, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: GameOptionsMenu_GameOptionsMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.GameOptionsMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: Game Options Menu
-    ItemIcon: {fileID: 0}
-    IsAlwaysOn: 0
-    Alignment: 6
-    ScreenCoveragePercent: 0.191
-    LayoutType: 1
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 4
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.57861626, g: 0.11099233, b: 0.11099233, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: RegisterMenu_RegisterMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.RegisterMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: RegisterMenu
-    ItemIcon: {fileID: 21300000, guid: 0d11d2ee977b2484b856b1fd72958bb7, type: 3}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.3
-    LayoutType: 1
-    ItemCellSize: {x: 200, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: EditUserMenu_EditUserMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.EditUserMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: EditUserMenu
-    ItemIcon: {fileID: 0}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.25
-    LayoutType: 2
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  - ID: Add New User_AddNewUserMenu
-    ParentCanvas: {fileID: 0}
-    ItemType:
-      _assemblyQualifiedName: NP_UI.AddNewUserMenu, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    MenuName: Add New User
-    ItemIcon: {fileID: 0}
-    IsAlwaysOn: 0
-    Alignment: 10
-    ScreenCoveragePercent: 0.25
-    LayoutType: 2
-    ItemCellSize: {x: 120, y: 40}
-    ItemSpacing: {x: 10, y: 10}
-    GridPadding:
-      m_Left: 15
-      m_Right: 15
-      m_Top: 15
-      m_Bottom: 15
-    GridChildAlignment: 1
-    GridLayoutConstraint: 0
-    GridLayoutConstraintCount: 1
-    MenuBackgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    ViewportBackgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
-    ItemBackgroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    ItemTextColor: {r: 1, g: 1, b: 1, a: 1}
-    IsBackgroundPanelVisible: 1
-  canvas: {fileID: 2713114548484949020}
---- !u!1 &2816139198834491703
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4595658677135892252
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,10 +43,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5819920050593957118}
-  - component: {fileID: 7222223856084453148}
-  - component: {fileID: 8243780556197418107}
-  - component: {fileID: 4437254774094485500}
+  - component: {fileID: 659404692636934177}
+  - component: {fileID: 315438731072196341}
+  - component: {fileID: 8468787021711753940}
+  - component: {fileID: 4232840513958408513}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -429,34 +54,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5819920050593957118
+--- !u!224 &659404692636934177
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2816139198834491703}
+  m_GameObject: {fileID: 4595658677135892252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1801053546387531132}
-  - {fileID: 2713114548484949020}
-  m_Father: {fileID: 7367386195551214502}
+  - {fileID: 7971857239975004160}
+  m_Father: {fileID: 5081030578198243805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!223 &7222223856084453148
+--- !u!223 &315438731072196341
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2816139198834491703}
+  m_GameObject: {fileID: 4595658677135892252}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
@@ -473,13 +97,13 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &8243780556197418107
+--- !u!114 &8468787021711753940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2816139198834491703}
+  m_GameObject: {fileID: 4595658677135892252}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -496,13 +120,13 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &4437254774094485500
+--- !u!114 &4232840513958408513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2816139198834491703}
+  m_GameObject: {fileID: 4595658677135892252}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -513,7 +137,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &4185906126818032557
+--- !u!1 &5140932226625451102
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,110 +145,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2713114548484949020}
-  m_Layer: 5
-  m_Name: Menus
+  - component: {fileID: 3302135372963184914}
+  - component: {fileID: 6084641274817928980}
+  m_Layer: 0
+  m_Name: MenusCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2713114548484949020
-RectTransform:
+--- !u!4 &3302135372963184914
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4185906126818032557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 5140932226625451102}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 573.42633, y: 383.40375, z: -1190.1947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5819920050593957118}
+  m_Father: {fileID: 5081030578198243805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &6282737098406009355
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1801053546387531132}
-  - component: {fileID: 2640217478488674707}
-  - component: {fileID: 724611390327069440}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1801053546387531132
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6282737098406009355}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7550121046607839634}
-  m_Father: {fileID: 5819920050593957118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2640217478488674707
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6282737098406009355}
-  m_CullTransparentMesh: 1
---- !u!114 &724611390327069440
+--- !u!114 &6084641274817928980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6282737098406009355}
-  m_Enabled: 0
+  m_GameObject: {fileID: 5140932226625451102}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb574250cecfc04993ba9eb7a69cea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &9178514417218881808
+  dataForMenu: []
+  canvas: {fileID: 7971857239975004160}
+--- !u!1 &7978563533096372335
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -632,9 +191,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7367386195551214502}
-  - component: {fileID: 1078979867632974911}
-  - component: {fileID: 401853175001968426}
+  - component: {fileID: 5081030578198243805}
+  - component: {fileID: 5770862980939339795}
+  - component: {fileID: 1664690638605156847}
   m_Layer: 0
   m_Name: GeneralScripts
   m_TagString: Untagged
@@ -642,38 +201,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7367386195551214502
+--- !u!4 &5081030578198243805
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178514417218881808}
+  m_GameObject: {fileID: 7978563533096372335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.354893, y: 348.3935, z: 121.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5819920050593957118}
-  - {fileID: 1044825830808850809}
+  - {fileID: 659404692636934177}
+  - {fileID: 3302135372963184914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1078979867632974911
+--- !u!114 &5770862980939339795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178514417218881808}
+  m_GameObject: {fileID: 7978563533096372335}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1960156c069d1ff40b6cac4b9abec4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuContainer: {fileID: 5819920050593957118}
-  iconsContainer: {fileID: 8828134703593761984}
-  parentCanvas: {fileID: 5819920050593957118}
+  menuContainer: {fileID: 659404692636934177}
+  iconsContainer: {fileID: 0}
+  parentCanvas: {fileID: 659404692636934177}
   itemCellSize: {x: 100, y: 30}
   itemSpacing: {x: 5, y: 5}
   gridPadding:
@@ -682,13 +241,13 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   gridChildAlignment: 0
---- !u!114 &401853175001968426
+--- !u!114 &1664690638605156847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178514417218881808}
+  m_GameObject: {fileID: 7978563533096372335}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f4b6e1e53c0ed246b7387b0ab5248c0, type: 3}
@@ -699,158 +258,3 @@ MonoBehaviour:
   _npGridLayout: {fileID: 0}
   _npInputField: {fileID: 3932791918485193590, guid: 01e87abc24002c44fb825d7cee6bdf31, type: 3}
   _npSlider: {fileID: 7596375380633286885, guid: 21db71cbcde99e34f9abdf415fc4391c, type: 3}
---- !u!1001 &945757623100457224
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1801053546387531132}
-    m_Modifications:
-    - target: {fileID: 1671222983703216563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671222983703216563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671222983703216563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671222983703216563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196529739639643563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196529739639643563, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095363730318263706, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095363730318263706, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5306905712070701719, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5306905712070701719, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778432594894079394, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778432594894079394, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873917551041193635, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-      propertyPath: m_Name
-      value: Scroll View
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
---- !u!224 &7550121046607839634 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7342954930644680858, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-  m_PrefabInstance: {fileID: 945757623100457224}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &8828134703593761984 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8620967420473142728, guid: eac32b9c688d9494aae361808e2725f5, type: 3}
-  m_PrefabInstance: {fileID: 945757623100457224}
-  m_PrefabAsset: {fileID: 0}
