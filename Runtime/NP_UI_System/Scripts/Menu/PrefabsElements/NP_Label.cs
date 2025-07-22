@@ -2,12 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
  
-// --- NP_Lable ---
+// --- NP_Label ---
 /// <summary>
 /// Represents a UI Label element, capable of displaying text.
 /// Implements ITextableElement interface.
 /// </summary>
-public class NP_Lable : NP_UIElements, ITextableElement
+public class NP_Label : NP_UIElements, ITextableElement
 {
     [SerializeField] private TextMeshProUGUI labelTextComponent; // Reference to Unity's Text component
 
@@ -17,7 +17,7 @@ public class NP_Lable : NP_UIElements, ITextableElement
         labelTextComponent = GetComponent<TextMeshProUGUI>();
         if (labelTextComponent == null)
         {
-            Debug.LogError("NP_Lable requires a Text component on its GameObject.", this);
+            Debug.LogError("NP_Label requires a Text component on its GameObject.", this);
         }
     }
 
@@ -50,7 +50,7 @@ public class NP_Lable : NP_UIElements, ITextableElement
         }
         else
         {
-            Debug.LogWarning("NP_Lable: No Graphic component found to set background color.", this);
+            Debug.LogWarning("NP_Label: No Graphic component found to set background color.", this);
         }
     }
 

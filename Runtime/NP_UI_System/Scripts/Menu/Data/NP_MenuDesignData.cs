@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
 {
     [SerializeField] private NP_Button _npButton;
-    [SerializeField] private NP_Lable _npLable;
+    [SerializeField] private NP_Label _npLable;
     [SerializeField] private NP_GridLayout _npGridLayout;
     [SerializeField] private NP_InputField _npInputField;
     [SerializeField] private NP_Slider _npSlider;
@@ -89,16 +89,16 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
         npButton.SetBackgroundColor(color);
     }
 
-    public NP_Lable CreateLabel(string text)
+    public NP_Label CreateLabel(string text)
     {
-        NP_Lable npLable = Instantiate(_npLable, Vector3.zero, Quaternion.identity);
+        NP_Label npLable = Instantiate(_npLable, Vector3.zero, Quaternion.identity);
         npLable.SetText(text);
         return npLable;
     }
 
-    public NP_Lable CreateLabel(GenericUIData uiData)
+    public NP_Label CreateLabel(GenericUIData uiData)
     {
-        NP_Lable npLable = Instantiate(_npLable, Vector3.zero, Quaternion.identity);
+        NP_Label npLable = Instantiate(_npLable, Vector3.zero, Quaternion.identity);
         LabelData labelData = uiData as LabelData;
         if (labelData != null)
         {

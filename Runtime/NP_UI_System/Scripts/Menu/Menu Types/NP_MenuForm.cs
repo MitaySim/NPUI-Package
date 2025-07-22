@@ -4,5 +4,5 @@ using UnityEngine.UI;
 
 public class NP_MenuForm : NP_Menu
 {
-    public NP_Lable errorLogLabel;
+    public NP_Label errorLogLabel;
 }

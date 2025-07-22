@@ -10,7 +10,7 @@ namespace NP_UI
         protected Dictionary<string, NP_UIElements> IElementsIDDictionary = new Dictionary<string, NP_UIElements>();
         protected GameObject MenuGameObject { get; set; }
 
-        [SerializeField] private NP_Lable headLineText;
+        [SerializeField] private NP_Label headLineText;
         [SerializeField] private GridLayoutGroup gridLayoutGroup;
         public NP_Menu npMenu;
         protected ElemetsIDSystem _elementsSystem;

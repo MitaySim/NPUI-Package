@@ -10,7 +10,7 @@ namespace NP_UI
     /// </summary>
     public class FormMenu : NpGenericMenu
     {
-        private NP_Lable errorLogLabel;
+        private NP_Label errorLogLabel;
         private bool isBottomErrorsDirected = false;
         private bool isPerFieldErrorsDirected = false;
         public override void OpenMenu()
@@ -249,7 +249,7 @@ namespace NP_UI
         public override NP_UIElements GetUIElement()
         {
             // Assuming NP_Lable is the correct UI element type for labels.
-            return UIElement as NP_Lable;
+            return UIElement as NP_Label;
         }
     }
 
