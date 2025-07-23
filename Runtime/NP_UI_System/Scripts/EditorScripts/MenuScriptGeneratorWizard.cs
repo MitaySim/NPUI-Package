@@ -223,6 +223,8 @@ public class MenuScriptGeneratorWizard : EditorWindow
         }
     }
 
+
+
     // --- Manual Menu Registration Logic ---
     private void ManuallyRegisterMenu()
     {
@@ -246,9 +248,11 @@ public class MenuScriptGeneratorWizard : EditorWindow
         MenuCreator menuCreator = FindObjectOfType<MenuCreator>();
         if (menuCreator == null)
         {
-            EditorUtility.DisplayDialog("Error", "No 'MenuCreator' script found in the current scene. Please add one to a GameObject.", "OK");
-            Debug.LogError("MenuScriptGeneratorWizard: No MenuCreator found in scene for registration.");
-            return;
+            EditorUtility.DisplayDialog("Error", "No 'MenuCreator' script found in the current scene. Please add one to a GameObject.\nCreating one.", "OK");
+            Debug.Log("MenuScriptGeneratorWizard: No MenuCreator found in scene for registration. Creating it first.");
+
+            GameObject menuCreatorGO = Resources.Load<GameObject>("Localizations/GeneralScripts");
+            menuCreator = Instantiate(menuCreatorGO).GetComponentInChildren<MenuCreator>();
         }
         
         SerializableType newMenuSerializableType = new SerializableType (menuTypeToRegister);
