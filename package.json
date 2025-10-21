@@ -20,4 +20,13 @@
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6"
   }
+},
+{
+  "samples": [
+    {
+      "displayName": "Demo Scenes",
+      "description": "A demo scene that shows how to use the package.",
+      "path": "Demo Scenes"
+    }
+  ]
 }
