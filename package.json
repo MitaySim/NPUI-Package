@@ -1,5 +1,4 @@
 {
-	{
   "name": "com.yourcompany.npui",
   "version": "1.0.0",
   "displayName": "NP UI System",
@@ -20,9 +19,7 @@
   },
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6"
-  }
-},
-{
+  },
   "samples": [
     {
       "displayName": "Demo Scenes",
@@ -30,5 +27,4 @@
       "path": "Demo Scenes"
     }
   ]
-}
 }
