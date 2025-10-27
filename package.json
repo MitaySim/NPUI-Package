@@ -24,7 +24,7 @@
     {
       "displayName": "Demo Scene",
       "description": "A demo scene that shows how to use the package.",
-      "path": "Samples/DemoScene"
+      "path": "Samples~/DemoScene"
     }
   ]
 }
