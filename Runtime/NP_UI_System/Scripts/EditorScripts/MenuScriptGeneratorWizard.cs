@@ -397,6 +397,9 @@ public class MenuScriptGeneratorWizard : EditorWindow
         content += "            base.StartAfterCreation(); // Call base to ensure NpGenericMenu's (or FormMenu's) setup runs\n";
         content += "            // This method can be used for any setup or initialization that needs to happen \n";
         content += "            // after the menu's GameObject is fully created and added to the scene.\n";
+        content += "            // This function also invokes the OnMenuCreated event and sends the current menu through it:\n";
+        content += "            // OnMenuCreated.Invoke(this);\n";
+
         content += "        }\n"; // Closing CreateMenuItems
 
 

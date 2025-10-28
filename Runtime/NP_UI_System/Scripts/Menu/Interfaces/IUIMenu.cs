@@ -100,7 +100,7 @@ namespace NP_UI
 
         public virtual void StartAfterCreation()
         {
-
+            NP_EventsManager.OnMenuCreated.Invoke(this);
         }
 
         public void InitializeMenu(NP_UIMenuData menuData)
@@ -212,7 +212,6 @@ namespace NP_UI
 
         public virtual void CreateMenuItems()
         {
-
         }
 
         /// <summary>
