@@ -95,6 +95,7 @@ public static class UIMenuGenerator
         }
         menu.headLineText.SetText(config.MenuName);
         menu.menuData = config;
+        menu.EscapeButton.gameObject.SetActive(config.UseEscapeButton);
     }
 
     private static void ApplyComponent(MenuData config, GameObject rootMenuGo)

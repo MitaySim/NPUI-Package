@@ -80,6 +80,7 @@ public class MenuData : IEquatable<MenuData>
 
     public MenuType TypeOfMenu; // General menu type (e.g., Regular, ScrollRect)
     public MenuFormType TypeOfFormMenu; // Specific form error handling type
+    public bool UseEscapeButton;
 
     public MenuData(string menuName, SerializableType itemType, UIMenuGenerator.MenuAlignment alignment,
         float screenCoveragePercent, UIMenuGenerator.GridLayoutType layoutType,
@@ -188,6 +189,7 @@ public class MenuData : IEquatable<MenuData>
         ID = menuName + "_" + itemType;
         TypeOfMenu = typeOfMenu;
         TypeOfFormMenu = typeOfFormMenu;
+        UseEscapeButton = false;
     }
 
     /// <summary>
