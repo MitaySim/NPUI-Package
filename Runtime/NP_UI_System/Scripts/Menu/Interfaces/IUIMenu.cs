@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace NP_UI
@@ -32,10 +33,10 @@ namespace NP_UI
 
         public void Awake()
         {
-            AlwaysOnHandler();
+            InitialisationHandler();
         }
 
-        private void AlwaysOnHandler()
+        private void InitialisationHandler()
         {
             npMenu = GetComponent<NP_Menu>();
             SetID();
@@ -44,6 +45,11 @@ namespace NP_UI
                 MenuData menuData = npMenu.menuData;
                 if (menuData != null)
                 {
+                    if (npMenu.menuData.UseEscapeButton && npMenu.EscapeButton != null)
+                    {
+                        npMenu.EscapeButton.onClick.AddListener(()=>gameObject.SetActive(false));
+                    }
+                    
                     bool isAlwaysOn = menuData.IsAlwaysOn;
                     if (isAlwaysOn)
                     {
@@ -54,6 +60,7 @@ namespace NP_UI
                 {
                     Debug.Log("MenuData not found for AlwaysOnHandler for unknown menu");
                 }
+
             }
             else
             {
@@ -61,6 +68,12 @@ namespace NP_UI
             }
         }
 
+        protected void SetEscapeButtonAction(UnityAction unityAction)
+        {
+            npMenu.EscapeButton.onClick.RemoveAllListeners();
+            npMenu.EscapeButton.onClick.AddListener(unityAction);
+        }
+        
         protected void ClearUI(bool clearData = true)
         {
             if (IElementsIDDictionary != null && IElementsIDDictionary.Count > 0)
