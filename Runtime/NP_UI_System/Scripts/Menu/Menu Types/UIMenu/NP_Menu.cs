@@ -10,4 +10,5 @@ public class NP_Menu : MonoBehaviour
     public ScrollRect scrollRect;
     public Image backgroundImage;
     public MenuData menuData;
+    public Button EscapeButton;
 }
