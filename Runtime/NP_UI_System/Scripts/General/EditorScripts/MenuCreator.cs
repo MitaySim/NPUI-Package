@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using NP_UI;
 using NUnit.Framework; // For Type
 
 public class MenuCreator : MonoBehaviour
@@ -19,7 +20,8 @@ public class MenuCreator : MonoBehaviour
         foreach (MenuData data in dataForMenu)
         {
             data.ParentCanvas = canvas;
-            UIMenuGenerator.CreateScrollableGridMenu(data);
+            NpGenericMenu genericMenu = UIMenuGenerator.CreateScrollableGridMenu(data);
+            NP_EventsManager.OnMenuCreated.Invoke(genericMenu);
         }
     }
     

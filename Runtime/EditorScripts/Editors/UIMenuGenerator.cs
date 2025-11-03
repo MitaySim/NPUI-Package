@@ -31,7 +31,7 @@ public static class UIMenuGenerator
     /// </summary>
     /// <param name="config">The MenuData struct/class containing all necessary parameters.</param>
     /// <returns>The root GameObject of the generated menu, or null if creation fails.</returns>
-    public static GameObject CreateScrollableGridMenu(MenuData config)
+    public static NpGenericMenu CreateScrollableGridMenu(MenuData config)
     {
         // --- 1. Validate parameters ---
         float actualScreenCoveragePercent = config.ScreenCoveragePercent; // Use a local variable to allow modification
@@ -72,7 +72,8 @@ public static class UIMenuGenerator
         ForceRebuildLayouts(menuRootRect, viewportRect, contentRect);
 
         rootMenuGO.SetActive(config.IsAlwaysOn);
-        return rootMenuGO;
+        
+        return rootMenuGO.GetComponent<NpGenericMenu>();
     }
 
     private static void SetColors(MenuData config, NP_Menu menu)
