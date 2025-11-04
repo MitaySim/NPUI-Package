@@ -3,6 +3,7 @@ using DA_Assets.Extensions;
 using NP_UI;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
 {
@@ -11,6 +12,7 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
     [SerializeField] private NP_GridLayout _npGridLayout;
     [SerializeField] private NP_InputField _npInputField;
     [SerializeField] private NP_Slider _npSlider;
+    [SerializeField] private NP_CheckBox _checkBox;
     
     
     public NP_Button CreateButton()
@@ -153,6 +155,18 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
         return npSlider;
     }
     
+    private NP_UIElements CreateCheckBox(GenericUIData uiData)
+    {
+        CheckBoxData checkBoxData = uiData as CheckBoxData;
+        NP_CheckBox npCheckBox = Instantiate(_checkBox, Vector3.zero, Quaternion.identity);
+        npCheckBox.SetOnValueChanged(checkBoxData.OnValueChanged);
+        npCheckBox.SetTextPosition(checkBoxData._textPosition);
+        npCheckBox.SetText(checkBoxData.Text);
+        npCheckBox.OperateButton(checkBoxData.UseImageButton);
+        npCheckBox.SetBackgroundImage(checkBoxData.ButtonImage);
+        return npCheckBox;
+    }
+    
     public NP_UIElements CreateUIElementByData(GenericUIData uiData)
     {
         Type typeOfData = uiData.GetType();
@@ -173,12 +187,18 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
         {
             npUIElements = CreateSlider(uiData);
         }
+        if (typeOfData == typeof(CheckBoxData))
+        {
+            npUIElements = CreateCheckBox(uiData);
+        }
         if (npUIElements != null)
         {
             npUIElements.ID = uiData.ID;
         }
         return npUIElements;
     }
+
+
 }
 
 

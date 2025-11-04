@@ -37,6 +37,7 @@ public class NP_MenusManager :  Singleton<NP_MenusManager>
         NP_EventsManager.OpenMenuEvent.AddListener(OnOpenMenuEvent);
         NP_EventsManager.CloseMenuEvent.AddListener(OnCloseMenuEvent);
         NP_EventsManager.CloseMenuEvent.AddListener(OnCloseMenuEvent);
+
     }
 
     private void OnOpenMenuEvent(NpGenericMenu menu)
