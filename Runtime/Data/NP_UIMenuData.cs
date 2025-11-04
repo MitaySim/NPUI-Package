@@ -264,7 +264,7 @@ using UnityEngine.Events;
             OnValueChanged = onValueChanged;
             Text = "";
             _textPosition = textPosition;
-            UseImageButton = false;
+            UseImageButton = useImageButton;
             ButtonImage = buttonImage;
             OnImageButtonClick = onImageButtonClick;
         }
