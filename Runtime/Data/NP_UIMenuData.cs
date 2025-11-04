@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 // Define the RectAlign enum/type if it doesn't exist elsewhere in your project.
@@ -224,6 +225,63 @@ using UnityEngine.Events;
         {
             OnValueChanged = onValueChanged;
             Text = text;
+        }
+
+        public override NP_UIElements GetUIElement()
+        {
+            return UIElement;
+        }
+    }
+
+    public class CheckBoxData : GenericUIData
+    {
+        public enum TextPosition
+        {
+            Bottom, 
+            Right
+        }
+        
+        public UnityAction<bool> OnValueChanged;
+        public string Text;
+        public TextPosition _textPosition;
+        public bool UseImageButton;
+        public UnityEngine.Sprite ButtonImage;
+        
+
+        public CheckBoxData(TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        {
+            OnValueChanged = null;
+            Text = "";
+            UseImageButton = useImageButton;
+            _textPosition = textPosition;
+            ButtonImage = buttonImage;
+        }
+
+        public CheckBoxData(UnityAction<bool> onValueChanged, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        {
+            OnValueChanged = onValueChanged;
+            Text = "";
+            _textPosition = textPosition;
+            UseImageButton = false;
+            ButtonImage = buttonImage;
+        }
+
+        public CheckBoxData(string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        {
+            OnValueChanged = null;
+            Text = text;
+            _textPosition = textPosition;
+            UseImageButton = useImageButton;
+            ButtonImage = buttonImage;
+        }
+
+        public CheckBoxData(UnityAction<bool> onValueChanged, string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        {
+            OnValueChanged = onValueChanged;
+            Text = text;
+            _textPosition = textPosition;
+            UseImageButton = useImageButton;
+            ButtonImage = buttonImage;
         }
 
         public override NP_UIElements GetUIElement()
