@@ -34,6 +34,10 @@ public class NP_CheckBox : NP_UIElements, IImageableElement
         }
     }
 
+    public void SetImageButtonOnClick(UnityAction clickAction)
+    {
+        _toggleButtonImage.SetOnClick(clickAction);
+    }
     public void OperateButton(bool isOperate)
     {
         _toggleButtonImage.gameObject.SetActive(isOperate);

@@ -246,42 +246,47 @@ using UnityEngine.Events;
         public TextPosition _textPosition;
         public bool UseImageButton;
         public UnityEngine.Sprite ButtonImage;
+        public UnityAction OnImageButtonClick;
         
 
-        public CheckBoxData(TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        public CheckBoxData(TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null, UnityAction onImageButtonClick = null)
         {
             OnValueChanged = null;
             Text = "";
             UseImageButton = useImageButton;
             _textPosition = textPosition;
             ButtonImage = buttonImage;
+            OnImageButtonClick = onImageButtonClick;
         }
 
-        public CheckBoxData(UnityAction<bool> onValueChanged, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        public CheckBoxData(UnityAction<bool> onValueChanged, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null, UnityAction onImageButtonClick = null)
         {
             OnValueChanged = onValueChanged;
             Text = "";
             _textPosition = textPosition;
             UseImageButton = false;
             ButtonImage = buttonImage;
+            OnImageButtonClick = onImageButtonClick;
         }
 
-        public CheckBoxData(string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        public CheckBoxData(string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null, UnityAction onImageButtonClick = null)
         {
             OnValueChanged = null;
             Text = text;
             _textPosition = textPosition;
             UseImageButton = useImageButton;
             ButtonImage = buttonImage;
+            OnImageButtonClick = onImageButtonClick;
         }
 
-        public CheckBoxData(UnityAction<bool> onValueChanged, string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null)
+        public CheckBoxData(UnityAction<bool> onValueChanged, string text, TextPosition textPosition, bool useImageButton = false, Sprite buttonImage = null, UnityAction onImageButtonClick = null)
         {
             OnValueChanged = onValueChanged;
             Text = text;
             _textPosition = textPosition;
             UseImageButton = useImageButton;
             ButtonImage = buttonImage;
+            OnImageButtonClick = onImageButtonClick;
         }
 
         public override NP_UIElements GetUIElement()

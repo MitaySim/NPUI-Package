@@ -164,6 +164,7 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
         npCheckBox.SetText(checkBoxData.Text);
         npCheckBox.OperateButton(checkBoxData.UseImageButton);
         npCheckBox.SetBackgroundImage(checkBoxData.ButtonImage);
+        npCheckBox.SetImageButtonOnClick(checkBoxData.OnImageButtonClick);
         return npCheckBox;
     }
     
