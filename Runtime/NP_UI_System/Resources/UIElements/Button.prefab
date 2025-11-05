@@ -106,6 +106,8 @@ MonoBehaviour:
     graphic:
       hasFill: 0
       hasStroke: 0
+      hasSingleColor: 0
+      hasSingleGradient: 0
       fill:
         hasSolid: 0
         hasGradient: 0
@@ -127,7 +129,7 @@ MonoBehaviour:
       _absoluteAngle: 0
     spritePath: 
     link: 
-    tagReason: 
+    tagReasons: []
     downloadableReason: 
     generativeReason: 
     downloadAttempsCount: 0
@@ -146,6 +148,7 @@ MonoBehaviour:
     maxSpriteSize: {x: 0, y: 0}
     parentTransformRect: {fileID: 0}
     parentTransform: {fileID: 0}
+    partOfPrefab: 0
 --- !u!222 &3532713496214399835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -201,8 +204,8 @@ MonoBehaviour:
   angle: 1.3016435
   gradient:
     serializedVersion: 2
-    key0: {r: 0.43333334, g: 0.027083334, b: 0.20312499, a: 1}
-    key1: {r: 0.725, g: 0.12083333, b: 0.4531249, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -335,6 +338,8 @@ MonoBehaviour:
     graphic:
       hasFill: 0
       hasStroke: 0
+      hasSingleColor: 0
+      hasSingleGradient: 0
       fill:
         hasSolid: 0
         hasGradient: 0
@@ -356,7 +361,7 @@ MonoBehaviour:
       _absoluteAngle: 0
     spritePath: 
     link: 
-    tagReason: 
+    tagReasons: []
     downloadableReason: 
     generativeReason: 
     downloadAttempsCount: 0
@@ -375,6 +380,7 @@ MonoBehaviour:
     maxSpriteSize: {x: 0, y: 0}
     parentTransformRect: {fileID: 0}
     parentTransform: {fileID: 0}
+    partOfPrefab: 0
 --- !u!114 &1071048601043605677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,8 +432,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -593,6 +599,8 @@ MonoBehaviour:
     graphic:
       hasFill: 0
       hasStroke: 0
+      hasSingleColor: 0
+      hasSingleGradient: 0
       fill:
         hasSolid: 0
         hasGradient: 0
@@ -614,7 +622,7 @@ MonoBehaviour:
       _absoluteAngle: 0
     spritePath: 
     link: 
-    tagReason: 
+    tagReasons: []
     downloadableReason: 
     generativeReason: 
     downloadAttempsCount: 0
@@ -633,6 +641,7 @@ MonoBehaviour:
     maxSpriteSize: {x: 0, y: 0}
     parentTransformRect: {fileID: 0}
     parentTransform: {fileID: 0}
+    partOfPrefab: 0
 --- !u!114 &3312913966570056078
 MonoBehaviour:
   m_ObjectHideFlags: 0

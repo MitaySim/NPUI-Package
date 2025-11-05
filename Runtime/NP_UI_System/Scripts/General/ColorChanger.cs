@@ -91,75 +91,70 @@ public class ColorChanger
     }
     
     
-    /// <summary>
-    /// Shifts the hue of the entire gradient to a new target hue, preserving 
-    /// relative saturation, value (brightness), and the gradient's original transitions.
-    /// </summary>
-    /// <param name="targetColor">A color whose hue will be used as the target hue for the gradient.</param>
-    public static void ShiftGradientHueDAG(DAGradient targetDAGradient,  Color targetColor) // Changed input to Color
+    public static void ShiftGradientHueDAG(DAGradient targetDAGradient, Color targetColor)
     {
-        if (targetDAGradient == null)
-        {
-            Debug.LogError("No DAGradient component assigned or found!");
-            return;
-        }
+        if (targetDAGradient == null) return;
 
-        // Extract the hue from the targetColor
-        float newHue;
-        float tempS, tempV; // We only care about the hue here
-        Color.RGBToHSV(targetColor, out newHue, out tempS, out tempV);
+        // Extract HSV
+        Color.RGBToHSV(targetColor, out float targetH, out float targetS, out float targetV);
+        bool targetIsGray = targetS < 0.01f;
 
-        // Get the current gradient. Adapt this line to your DAGradient implementation.
-        Gradient currentGradient = targetDAGradient.Gradient; 
-
-        // Get the color keys
+        Gradient currentGradient = targetDAGradient.Gradient;
         GradientColorKey[] colorKeys = currentGradient.colorKeys;
-
-        // Handle case where gradient might be empty or invalid initially
-        if (colorKeys.Length == 0)
-        {
-            Debug.LogWarning("Gradient has no color keys. Cannot perform hue shift.");
-            return;
-        }
-
-        // Calculate the hue shift amount based on the first color key's original hue
-        float firstColorHue;
-        float firstColorSaturation;
-        float firstColorValue; 
-        Color.RGBToHSV(colorKeys[0].color, out firstColorHue, out firstColorSaturation, out firstColorValue);
-
-        // The difference between the new target hue and the original first hue
-        float hueOffset = newHue - firstColorHue;
-
-        // Iterate through each color key and apply the hue shift
-        for (int i = 0; i < colorKeys.Length; i++)
-        {
-            Color originalColor = colorKeys[i].color;
-
-            float h, s, v;
-            Color.RGBToHSV(originalColor, out h, out s, out v);
-
-            // Apply the hue shift. Use Mathf.Repeat to wrap around the 0-1 range.
-            h = Mathf.Repeat(h + hueOffset, 1f); 
-
-            // Convert back to RGB
-            Color shiftedColor = Color.HSVToRGB(h, s, v);
-
-            // Preserve original alpha
-            shiftedColor.a = originalColor.a;
-
-            colorKeys[i].color = shiftedColor;
-        }
-
-        // Get the alpha keys (we're keeping them as they are)
         GradientAlphaKey[] alphaKeys = currentGradient.alphaKeys;
 
-        // Apply the modified color keys and original alpha keys back to the gradient
-        currentGradient.SetKeys(colorKeys, alphaKeys);
+        if (colorKeys.Length == 0) return;
 
-        // Update the DAGradient component. Adapt this line to your DAGradient implementation.
-        targetDAGradient.Gradient = currentGradient; 
+        // Find base hue (first colored key)
+        float baseHue = targetH;
+        foreach (var key in colorKeys)
+        {
+            Color.RGBToHSV(key.color, out float h, out float s, out _);
+            if (s > 0.01f) { baseHue = h; break; }
+        }
+        float hueOffset = targetH - baseHue;
+
+        Gradient newGradient = new Gradient();
+
+        for (int i = 0; i < colorKeys.Length; i++)
+        {
+            Color original = colorKeys[i].color;
+            Color.RGBToHSV(original, out float h, out float s, out float v);
+
+            bool wasGray = s < 0.01f;
+            Color result;
+
+            if (targetIsGray)
+            {
+                // Target grayscale → force output grayscale, match targetV exactly
+                result = Color.HSVToRGB(0f, 0f, targetV, true);
+            }
+            else if (wasGray)
+            {
+                // Original grayscale → colorize with target hue and saturation
+                result = Color.HSVToRGB(targetH, targetS, Mathf.Max(v, targetV), true);
+            }
+            else
+            {
+                // Colored → colored → apply hue offset
+                float newH = Mathf.Repeat(h + hueOffset, 1f);
+                result = Color.HSVToRGB(newH, s, v, true);
+            }
+
+            result.a = original.a;
+            colorKeys[i].color = result;
+        }
+
+        newGradient.SetKeys(colorKeys, alphaKeys);
+        targetDAGradient.Gradient = newGradient;
     }
+
+
+
+
+
+
+
 
 
 

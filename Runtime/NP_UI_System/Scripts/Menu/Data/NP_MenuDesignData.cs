@@ -76,7 +76,6 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
         isPictureButton = buttonData.MenuIcon != null;
         isTextButton = !buttonData.Text.IsEmpty();
         HandleButtonAbilities(buttonData.MenuIcon, buttonData.Text, buttonData.BackgroundColor, npButton, isPictureButton, isTextButton);
-
     }
 
     private void HandlePictureButton(Sprite menuIcon, NP_Button npButton)
@@ -88,6 +87,10 @@ public class NP_MenuDesignData : Singleton<NP_MenuDesignData>
     private void HandleTextButton(string textButton, Color color, NP_Button npButton)
     {
         npButton.SetText(textButton);
+        if (color == new Color(0,0,0,0))
+        {
+            color = Color.white;
+        }
         npButton.SetBackgroundColor(color);
     }
 
