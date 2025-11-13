@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using System.IO;
@@ -464,3 +465,4 @@ public class MenuScriptGeneratorWizard : EditorWindow
         }
     }
 }
+#endif
